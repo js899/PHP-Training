@@ -1,14 +1,14 @@
 <?php
-include "index.html";
 session_start();
 
 if (isset($_POST['save'])) {
-    $_SESSION['name'] = $_POST['name'];
-    echo $_SESSION['name'];
+    $_SESSION['email'] = $_POST['email'];
+    echo "<strong class='container'>".$_SESSION['email']."</strong>";
 }
 if (isset($_POST['reset'])) {
     session_unset();
-    echo $_SESSION['name'];
+    $_SESSION['email'];
+    echo "<strong class='container'>Session is reset.</strong>";
 }
-
+include "index.html";
 ?>
